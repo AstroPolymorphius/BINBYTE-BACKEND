@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     """
 
     DATABASE_URL: str
-    LIVE_DATABASE_URL :str
+    #LIVE_DATABASE_URL :str
     REDIS_HOST: str = "localhost"
     REDIS_PORT: int = 6379
     JTI_EXPIRY: int
@@ -24,12 +24,12 @@ class Settings(BaseSettings):
     ALLOWED_METHODS: list[str]
     ALLOWED_HEADERS: list[str]
     PRODUCTION: int
-    SMTP_SERVER: str
-    SMTP_PORT:int
-    OTP_EXPIRY_MINUTES:int
-    CLOUD_NAME:str
-    CLOUD_API_KEY:str
-    CLOUD_API_SECRET:str
+    #SMTP_SERVER: str
+    #SMTP_PORT:int
+    #OTP_EXPIRY_MINUTES:int
+    #CLOUD_NAME:str
+    #CLOUD_API_KEY:str
+    #CLOUD_API_SECRET:str
 
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
