@@ -23,7 +23,7 @@ class IPWhitelist(BaseHTTPMiddleware):
         client_ip = request.client.host #type: ignore
 
         # 2️⃣ Allow direct IP whitelisting (for trusted addresses)
-        if client_ip in self.allowed_ips:
+        if "*" in self.allowed_ips or client_ip in self.allowed_ips:
             return await call_next(request)
 
         # 3️⃣ Block local/private network IPs (they can't be geolocated)
