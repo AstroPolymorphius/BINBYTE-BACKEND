@@ -7,8 +7,6 @@ from sqlalchemy.orm import Mapped, mapped_column
 
 
 class ProjectKeyFeatures(UUIDModel, TimestampedModel):
-    __tablenames__ = "Product key features"
-    keyfeaturesID: Mapped[UUID] =  mapped_column(pgUUID(as_uuid=True),primary_key=True,index = True)
     keyfeature: Mapped[str] = mapped_column(String, nullable=False)
     projectID: Mapped[UUID] = mapped_column(pgUUID(as_uuid=True),primary_key=True,index = True)  # FK
 
