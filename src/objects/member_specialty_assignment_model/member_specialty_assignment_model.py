@@ -10,5 +10,5 @@ from src.models.base import UUIDModel
 class MemberSpecialtyAssignment(UUIDModel):
     __tablename__ = "Member Specialty Assignments"
     
-    MemberId = Mapped[str] = mapped_column(String, nullable = False)
-    SpecialtyId = Mapped[str] = mapped_column(String, nullable = False)
+    memberId = Mapped[str] = mapped_column(String, nullable = False)
+    specialtyId = Mapped[str] = mapped_column(String, nullable = False)
