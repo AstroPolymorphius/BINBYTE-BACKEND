@@ -2,7 +2,6 @@
 from sqlalchemy import Column, Integer, String,Float
 from src.models.base import UUIDModel,TimestampedModel
 from uuid import UUID # for generating unique IDs(this is from python standard library)
-from sqlalchemy.dialects.postgresql import UUID as pgUUID
 from sqlalchemy.orm import  Mapped, mapped_column
 
 class Member(UUIDModel,TimestampedModel):
