@@ -16,6 +16,6 @@ class Testimonial(UUIDModel, TimestampedModel):
     feedback: Mapped[str] = mapped_column(String, nullable=False)  
     rating: Mapped[int] = mapped_column(Integer, nullable=False)   
     fields_of_training: Mapped[str] = mapped_column(String, nullable=False)    
-    date_of_testimonial:  Mapped[datetime] =mapped_column(DateTime,nullable=True, default=datetime.utcnow)     
+    date_of_testimonial:  Mapped[datetime] =mapped_column(DateTime,nullable=True, default=datetime.utcnow)    
 
 
