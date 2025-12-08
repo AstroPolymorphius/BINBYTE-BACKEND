@@ -10,13 +10,11 @@ from src.models.base import UUIDModel, TimestampedModel
 
 #Defines the project model in the database
 class Project(UUIDModel, TimestampedModel):
-    __tablename__ = "projects"
-
-    projectname = Mapped[str] = mapped_column(String, nullable= False)
-    category = Mapped[str] = mapped_column(String, nullable= False)
-    status = Mapped[str] = mapped_column(String, nullable= False)
-    completed = Mapped[date] = mapped_column(Date, nullable= True)
-    duration = Mapped[str] = mapped_column(String, nullable= True)
-    about = Mapped[str] = mapped_column(String, nullable= True)
-    githubURL = Mapped[str] = mapped_column(String, unique = True, nullable= True)
-    websiteURL = Mapped[str] = mapped_column(String, nullable= True)
+    projectname : Mapped[str] = mapped_column(String, nullable= False)
+    category : Mapped[str] = mapped_column(String, nullable= False)
+    status : Mapped[str] = mapped_column(String, nullable= False)
+    completed : Mapped[date] = mapped_column(Date, nullable= True)
+    duration : Mapped[str] = mapped_column(String, nullable= True)
+    about : Mapped[str] = mapped_column(String, nullable= True)
+    githubURL : Mapped[str] = mapped_column(String, unique = True, nullable= True)
+    websiteURL : Mapped[str] = mapped_column(String, nullable= True)
